@@ -1,5 +1,13 @@
 # aisdk/togetherai
 
+<a href="https://github.com/phpaisdk/togetherai/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/phpaisdk/togetherai/tests.yml?branch=main&label=Tests"></a>
+<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/aisdk/togetherai"></a>
+<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="Latest Version" src="https://img.shields.io/packagist/v/aisdk/togetherai"></a>
+<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="License" src="https://img.shields.io/packagist/l/aisdk/togetherai"></a>
+<a href="https://whyphp.dev"><img src="https://img.shields.io/badge/Why_PHP-in_2026-7A86E8?style=flat-square&labelColor=18181b" alt="Why PHP in 2026"></a>
+
+------
+
 Official TogetherAI provider for the PHP AI SDK. Uses TogetherAI's Chat Completions API.
 
 ## Installation

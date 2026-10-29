@@ -2,7 +2,7 @@
 
 Notable changes to `aisdk/togetherai`. Release notes are also published at https://github.com/phpaisdk/togetherai/releases.
 
-## Unreleased (v0.10.1)
+## v0.10.1 — 2026-10-29
 
 - Fix the default endpoint to `https://api.together.ai/v1`; the previous host could not be reached.
 

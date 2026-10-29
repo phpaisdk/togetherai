@@ -109,3 +109,13 @@ it('accepts opaque text model ids without a model inventory', function () {
 
     expect(TogetherAI::model('future-private-model')->modelId())->toBe('future-private-model');
 });
+
+it('sends requests to the documented Together AI endpoint', function () {
+    $client = new FakeHttpClient(200, json_encode(['choices' => [['index' => 0, 'message' => ['content' => 'ok'], 'finish_reason' => 'stop']], 'usage' => []]));
+    configureTogetherAIWith($client);
+    TogetherAI::create(['apiKey' => 'together-test']);
+
+    Generate::text('Hi')->model(TogetherAI::model('meta-llama/Llama-3.3-70B-Instruct-Turbo'))->run();
+
+    expect((string) $client->lastRequest->getUri())->toBe('https://api.together.ai/v1/chat/completions');
+});

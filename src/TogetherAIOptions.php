@@ -10,7 +10,7 @@ use AiSdk\Utils\Support\Url;
 
 final class TogetherAIOptions
 {
-    public const string DEFAULT_BASE_URL = 'https://api.togetherai.ai/v1';
+    public const string DEFAULT_BASE_URL = 'https://api.together.ai/v1';
     public const string PROVIDER_NAME = 'togetherai';
 
     /**

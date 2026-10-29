@@ -34,7 +34,7 @@ echo $result->text;
 | Variable | Description | Default |
 |---|---|---|
 | `TOGETHERAI_API_KEY` | API key for authentication | Required |
-| `TOGETHERAI_BASE_URL` | Base URL for API requests | `https://api.togetherai.ai` |
+| `TOGETHERAI_BASE_URL` | Base URL for API requests | `https://api.together.ai/v1` |
 
 ## Supported Capabilities
 

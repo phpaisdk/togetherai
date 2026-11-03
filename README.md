@@ -1,14 +1,6 @@
-# aisdk/togetherai
+# PHP AI SDK — Together AI
 
-<a href="https://github.com/phpaisdk/togetherai/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/phpaisdk/togetherai/tests.yml?branch=main&label=Tests"></a>
-<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/aisdk/togetherai"></a>
-<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="Latest Version" src="https://img.shields.io/packagist/v/aisdk/togetherai"></a>
-<a href="https://packagist.org/packages/aisdk/togetherai"><img alt="License" src="https://img.shields.io/packagist/l/aisdk/togetherai"></a>
-<a href="https://whyphp.dev"><img src="https://img.shields.io/badge/Why_PHP-in_2026-7A86E8?style=flat-square&labelColor=18181b" alt="Why PHP in 2026"></a>
-
-------
-
-Official TogetherAI provider for the PHP AI SDK. Uses TogetherAI's Chat Completions API.
+Text generation, streaming, and tool calling through Together AI. Part of the framework-agnostic [PHP AI SDK](https://phpaisdk.com).
 
 ## Installation
 
@@ -16,51 +8,27 @@ Official TogetherAI provider for the PHP AI SDK. Uses TogetherAI's Chat Completi
 composer require aisdk/togetherai
 ```
 
-## Basic Usage
+Set `TOGETHERAI_API_KEY` in your environment.
+
+## Usage
 
 ```php
 use AiSdk\Generate;
 use AiSdk\TogetherAI;
 
-$result = Generate::text('What happened in technology today?')
-    ->model(TogetherAI::model('meta-llama/Llama-3.3-70B-Instruct-Turbo'))
+$result = Generate::text('Explain closures in PHP in one sentence.')
+    ->model(TogetherAI::model('deepseek-ai/DeepSeek-V4.1-Flash-1017'))
     ->run();
 
 echo $result->text;
 ```
 
-## Configuration
-
-| Variable | Description | Default |
-|---|---|---|
-| `TOGETHERAI_API_KEY` | API key for authentication | Required |
-| `TOGETHERAI_BASE_URL` | Base URL for API requests | `https://api.together.ai/v1` |
-
-## Supported Capabilities
-
-| Capability | Support |
-|---|---|
-| Text generation | Native |
-| Streaming | Native |
-| Tool calling | Native |
-| Structured output | Adapted (`json_object` with an explicit JSON instruction) |
-| Text input | Native |
-
-Provider-specific fields can be passed through `providerOptions('togetherai', [...])`. Model IDs are opaque strings and TogetherAI remains the authority on model availability.
-
-## Testing
-
-```bash
-composer test:all
-```
-
 ## Documentation
 
-- [PHP AI SDK documentation](https://phpaisdk.com/docs)
-- [Together AI documentation](https://phpaisdk.com/docs/togetherai)
+[Read the documentation](https://phpaisdk.com/docs/0.x/providers/togetherai) for configuration, supported features, and more examples.
 
-## Community
+[Contributing](https://github.com/phpaisdk/.github/blob/main/CONTRIBUTING.md) · [Support](https://github.com/phpaisdk/.github/blob/main/SUPPORT.md)
 
-- [Contributing](https://github.com/phpaisdk/.github/blob/main/CONTRIBUTING.md)
-- [Support](https://github.com/phpaisdk/.github/blob/main/SUPPORT.md)
-- For private security reports, email [security@phpaisdk.com](mailto:security@phpaisdk.com).
+## License
+
+The MIT License (MIT). See [LICENSE](LICENSE) for details.
